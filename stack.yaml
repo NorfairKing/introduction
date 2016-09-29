@@ -1,0 +1,22 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- introduction
+- introduction-test
+- location: /home/syd/validity/validity
+  extra-dep: true
+- location: /home/syd/validity/validity-text
+  extra-dep: true
+- location: /home/syd/validity/validity-containers
+  extra-dep: true
+- location: /home/syd/validity/genvalidity
+  extra-dep: true
+- location: /home/syd/validity/genvalidity-containers
+  extra-dep: true
+- location: /home/syd/validity/genvalidity-text
+  extra-dep: true
+- location: /home/syd/validity/genvalidity-hspec
+  extra-dep: true
+extra-deps:
+- path-io-1.2.0
+resolver: lts-7.1
