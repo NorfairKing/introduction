@@ -3,20 +3,12 @@ extra-package-dbs: []
 packages:
 - introduction
 - introduction-test
-- location: /home/syd/validity/validity
-  extra-dep: true
-- location: /home/syd/validity/validity-text
-  extra-dep: true
-- location: /home/syd/validity/validity-containers
-  extra-dep: true
-- location: /home/syd/validity/genvalidity
-  extra-dep: true
-- location: /home/syd/validity/genvalidity-containers
-  extra-dep: true
-- location: /home/syd/validity/genvalidity-text
-  extra-dep: true
-- location: /home/syd/validity/genvalidity-hspec
-  extra-dep: true
 extra-deps:
-- path-io-1.2.0
+- genvalidity-0.2.0.4
+- genvalidity-containers-0.1.0.2
+- genvalidity-hspec-0.2.0.5
+- genvalidity-text-0.1.0.1
+- validity-0.3.0.4
+- validity-containers-0.1.0.1
+- validity-text-0.1.0.1
 resolver: lts-7.1

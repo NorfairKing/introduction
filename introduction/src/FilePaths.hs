@@ -4,10 +4,10 @@ module FilePaths
     ( module X
     ) where
 
-import           Data.Maybe
 import           Data.Bool       (not, (&&))
-import           Data.Eq         ((==), (/=))
+import           Data.Eq         ((/=), (==))
 import           Data.List       (isInfixOf, null)
+import           Data.Maybe
 import qualified System.FilePath as FilePath
 
 import           Data.Validity
@@ -52,5 +52,4 @@ instance Validity (Path Rel Dir) where
     && fp /= ".."
     && not (".." `isInfixOf` fp)
     && (parseRelDir fp == Just p)
-
 
