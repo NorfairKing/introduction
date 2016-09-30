@@ -3,8 +3,8 @@ version:             0.0.1.0
 synopsis:            A prelude for the tests of safe new projects
 description:         A prelude for the tests of safe new projects
 homepage:            https://github.com/NorfairKing/introduction
-license:             AllRightsReserved
-license-file:        LICENSE.md
+license:             MIT
+license-file:        LICENSE
 author:              Tom Sydney Kerckhove
 maintainer:          syd.kerckhove@gmail.com
 copyright:           2016 Tom Sydney Kerckhove
