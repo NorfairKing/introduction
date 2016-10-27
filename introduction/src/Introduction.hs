@@ -59,7 +59,9 @@ import           Data.Traversable          as X
 
 import           Data.RelativeValidity     as X
 import           Data.Validity             as X
+import           Data.Validity.ByteString  as X ()
 import           Data.Validity.Containers  as X ()
+import           Data.Validity.Text        as X ()
 
 -- Deepseq
 import           Control.DeepSeq           as X (NFData (..), deepseq, force,

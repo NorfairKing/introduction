@@ -4,6 +4,8 @@ packages:
 - introduction
 - introduction-test
 extra-deps:
+- location: /home/syd/validity/validity-bytestring
+  extra-dep: true
 - genvalidity-0.2.0.4
 - genvalidity-containers-0.1.0.2
 - genvalidity-hspec-0.2.0.5

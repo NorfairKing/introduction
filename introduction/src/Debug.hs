@@ -8,6 +8,7 @@ module Debug
   , traceM
   , traceIO
   , traceShow
+  , traceShowId
   , traceShowM
   , notImplemented
   ) where
@@ -38,6 +39,10 @@ traceShow a b = T.trace (P.show a) b
 {-# WARNING traceShowM "'traceShowM' remains in code" #-}
 traceShowM :: (P.Show a, Monad m) => a -> m ()
 traceShowM a = traceM (P.show a)
+
+{-# WARNING traceShowId "'traceShowId' remains in code" #-}
+traceShowId :: P.Show a => a -> a
+traceShowId a = T.traceShowId a
 
 {-# WARNING traceM "'traceM' remains in code" #-}
 traceM :: (Monad m) => String -> m ()
