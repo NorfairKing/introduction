@@ -14,6 +14,7 @@ import           Data.GenValidity            as X
 import           Data.GenValidity.Containers as X
 import           Data.GenValidity.Text       as X
 import           Test.Validity               as X
+import           Test.Validity.Aeson         as X
 
 import           Path.Internal
 
