@@ -33,7 +33,7 @@ import           Base                      as Base hiding (appendFile, putStr,
                                                     putStrLn, readFile, show,
                                                     writeFile)
 
-import           Data.String               as X (String)
+import           Data.String               as X (String, unwords, unlines, words, lines)
 
 -- Maybe'ized version of partial functions
 import           Safe                      as X (atDef, atMay, foldl1May,
