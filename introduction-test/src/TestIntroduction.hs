@@ -13,9 +13,13 @@ import Test.QuickCheck as X
 import Data.GenRelativeValidity as X
 import Data.GenValidity as X
 import Data.GenValidity.Containers as X
+import Data.GenValidity.Path as X
 import Data.GenValidity.Text as X
 import Test.Validity as X
 import Test.Validity.Aeson as X
+       hiding (encodeAndDecodeAreInversesOnGen, neverFailsToEncodeOnGen)
+import Test.Validity.Cereal as X
+       hiding (encodeAndDecodeAreInversesOnGen, neverFailsToEncodeOnGen)
 
 import Path.Internal
 
@@ -97,8 +101,7 @@ instance CoArbitrary Time.TimeZone where
 
 instance Arbitrary Time.TimeOfDay where
     arbitrary =
-        Time.TimeOfDay <$> choose (0, 23) <*> choose (0, 59) -- minute
-         <*>
+        Time.TimeOfDay <$> choose (0, 23) <*> choose (0, 59) <*>
         (fromRational . toRational <$> choose (0 :: Double, 60)) -- picoseconds, via double
     shrink tod@(Time.TimeOfDay hour minute second) =
         [tod {Time.todHour = h'} | h' <- shrink hour] ++
@@ -135,23 +138,3 @@ instance Arbitrary Time.AbsoluteTime where
 
 instance CoArbitrary Time.AbsoluteTime where
     coarbitrary = coarbitrary . flip Time.diffAbsoluteTime Time.taiEpoch
-
-instance GenUnchecked (Path Abs File) where
-    genUnchecked = Path <$> arbitrary
-
-instance GenValid (Path Abs File)
-
-instance GenUnchecked (Path Rel File) where
-    genUnchecked = Path <$> arbitrary
-
-instance GenValid (Path Rel File)
-
-instance GenUnchecked (Path Abs Dir) where
-    genUnchecked = Path <$> arbitrary
-
-instance GenValid (Path Abs Dir)
-
-instance GenUnchecked (Path Rel Dir) where
-    genUnchecked = Path <$> arbitrary
-
-instance GenValid (Path Rel Dir)
