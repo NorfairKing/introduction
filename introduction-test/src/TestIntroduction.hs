@@ -1,5 +1,6 @@
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE NoImplicitPrelude #-}
+{-# OPTIONS_GHC -Wno-orphans #-}
 
 module TestIntroduction
     ( module X
@@ -13,15 +14,13 @@ import Test.QuickCheck as X
 import Data.GenRelativeValidity as X
 import Data.GenValidity as X
 import Data.GenValidity.Containers as X
-import Data.GenValidity.Path as X
+import Data.GenValidity.Path as X ()
 import Data.GenValidity.Text as X
 import Test.Validity as X
 import Test.Validity.Aeson as X
        hiding (encodeAndDecodeAreInversesOnGen, neverFailsToEncodeOnGen)
 import Test.Validity.Cereal as X
        hiding (encodeAndDecodeAreInversesOnGen, neverFailsToEncodeOnGen)
-
-import Path.Internal
 
 import qualified Data.Time as Time
 import qualified Data.Time.Clock.TAI as Time
