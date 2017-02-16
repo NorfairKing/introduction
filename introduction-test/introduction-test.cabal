@@ -44,7 +44,7 @@ library
     , genvalidity              >= 0.3     && < 0.4
     , genvalidity-path         >= 0.1     && < 0.2
     , genvalidity-containers   >= 0.2     && < 0.3
-    , genvalidity-text         >= 0.2     && < 0.3
+    , genvalidity-text         >= 0.3     && < 0.4
     , genvalidity-hspec        >= 0.3     && < 0.4
     , genvalidity-hspec-aeson  >= 0.0     && < 0.1
     , genvalidity-hspec-cereal >= 0.0     && < 0.1

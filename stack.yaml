@@ -4,13 +4,16 @@ packages:
 - introduction
 - introduction-test
 extra-deps:
-- location: /home/syd/validity/validity-bytestring
-  extra-dep: true
-- genvalidity-0.2.0.4
-- genvalidity-containers-0.1.0.2
-- genvalidity-hspec-0.2.0.5
-- genvalidity-text-0.1.0.1
-- validity-0.3.0.4
-- validity-containers-0.1.0.1
-- validity-text-0.1.0.1
+- genvalidity-0.3.1.0
+- genvalidity-containers-0.2.0.0
+- genvalidity-hspec-0.3.1.0
+- genvalidity-hspec-aeson-0.0.1.0
+- genvalidity-hspec-cereal-0.0.0.0
+- genvalidity-path-0.1.0.0
+- genvalidity-text-0.3.0.0
+- validity-0.3.2.0
+- validity-bytestring-0.1.0.0
+- validity-containers-0.1.0.2
+- validity-path-0.1.0.0
+- validity-text-0.1.1.0
 resolver: lts-7.1
